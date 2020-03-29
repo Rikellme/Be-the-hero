@@ -32,7 +32,7 @@ export default function Register() {
     
             alert(`Seu ID de acesso: ${response.data.id}`)
         
-            history .push('/');
+            history.push('/');
         } catch(err) {
             alert('Erro no cadastro, tente novamente')
         }
@@ -65,7 +65,12 @@ export default function Register() {
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         />
-                    <input placeholder="Whatsassp"/>
+                    <input
+                        placeholder="Whatsassp"
+                        value={whatsapp}
+                        onChange={e => setWhatsapp(e.target.value)}
+
+                    />
                     
                     <div className="input-group">
                         <input 

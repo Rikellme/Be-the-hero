@@ -59,24 +59,24 @@ export default function Incidents() {
             <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia.</Text>
         
 
-            <FlatList >
+            <FlatList 
                 data={incidents}
-                style={styles.incidentsList}
+                style={styles.incidentList}
                 keyExtractor={incident => String(incident.id)}
                 showsVerticalScrollIndicator={false}
                 onEndReached={loadIncidents}
                 onEndReachedThreshold={0.2}
                 renderItem={({ item: incident }) => (
                     
-                <View styles={styles.incident}>
-                    <Text style={style.incidentProperty}>ONG:</Text>
-                    <Text style={style.incidentValue}>{incident.name}</Text>
+                <View style={styles.incident}>
+                    <Text style={styles.incidentProperty}>ONG:</Text>
+                    <Text style={styles.incidentValue}>{incident.name}</Text>
 
-                    <Text style={style.incidentProperty}>CASO:</Text>
-                    <Text style={style.incidentValue}>{incident.title}</Text>
+                    <Text style={styles.incidentProperty}>CASO:</Text>
+                    <Text style={styles.incidentValue}>{incident.title}</Text>
 
-                    <Text style={style.incidentProperty}>VALOR:</Text>
-                    <Text style={style.incidentValue}>
+                    <Text style={styles.incidentProperty}>VALOR:</Text>
+                    <Text style={styles.incidentValue}>
                         {Intl.NumberFormat('pt-BR', {
                             style: 'currency', 
                             currency: 'BRL'
@@ -92,7 +92,7 @@ export default function Incidents() {
                    </TouchableOpacity>
                 </View>
                 )}
-            </FlatList>
+            />
 
         </View>
     );

@@ -11,7 +11,7 @@ export default function Routes() {
     return (
         <NavigationContainer>
 
-            <AppStack.Navigator screenOption={{ headerShown: false }}>
+            <AppStack.Navigator /*Propriedade usada para desativar o cabeçalho*/ screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Incidents" component={Incidents} />
                 <AppStack.Screen name="Detail" component={Detail } />
             </AppStack.Navigator>

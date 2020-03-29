@@ -42,14 +42,14 @@ export default function Detail() {
             </View>
 
             <View style={styles.incident}>
-                <Text style={[style.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
-                <Text style={style.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
+                <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
+                <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
 
-                <Text style={style.incidentProperty}>CASO:</Text>
-                <Text style={style.incidentValue}>{incident.title}</Text>
+                <Text style={styles.incidentProperty}>CASO:</Text>
+                <Text style={styles.incidentValue}>{incident.title}</Text>
 
-                <Text style={style.incidentProperty}>VALOR:</Text>
-                <Text style={style.incidentValue}>
+                <Text style={styles.incidentProperty}>VALOR:</Text>
+                <Text style={styles.incidentValue}>
                     {Intl.NumberFormat('pt-BR', {
                         style: 'currency', 
                         currency: 'BRL'
